@@ -4,6 +4,7 @@ import {PlayerListComponent} from './player/player-list/player-list.component';
 import {PlayerCreateComponent} from './player/player-create/player-create.component';
 import {PlayerEditComponent} from './player/player-edit/player-edit.component';
 import {PlayerDeleteComponent} from './player/player-delete/player-delete.component';
+import {PlayerDetailComponent} from './player/player-detail/player-detail.component';
 
 // @ts-ignore
 // @ts-ignore
@@ -19,6 +20,9 @@ const routes: Routes = [{
 }, {
   path: 'player/delete/:id',
   component: PlayerDeleteComponent
+}, {
+  path: 'player/detail/:id',
+  component: PlayerDetailComponent
 }];
 
 @NgModule({

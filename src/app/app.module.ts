@@ -9,6 +9,7 @@ import { PlayerCreateComponent } from './player/player-create/player-create.comp
 import {ReactiveFormsModule} from '@angular/forms';
 import { PlayerEditComponent } from './player/player-edit/player-edit.component';
 import { PlayerDeleteComponent } from './player/player-delete/player-delete.component';
+import { PlayerDetailComponent } from './player/player-detail/player-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PlayerDeleteComponent } from './player/player-delete/player-delete.comp
     PlayerListComponent,
     PlayerCreateComponent,
     PlayerEditComponent,
-    PlayerDeleteComponent
+    PlayerDeleteComponent,
+    PlayerDetailComponent
   ],
   imports: [
     BrowserModule,
