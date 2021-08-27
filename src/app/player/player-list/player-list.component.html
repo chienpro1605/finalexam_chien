@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6"><h3>Có {{players.length}} dân chơi</h3></div>
+    <div class="col-md-6">
+      <div class="float-md-end">
+        <button class="float-md-end" routerLink="/player/create">Thêm dân chơi</button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <table class="table table-success table-striped" border="1">
+      <thead>
+      <tr>
+        <th>STT</th>
+        <th>Tên player</th>
+        <th>champ</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <ng-container>
+        <tr *ngFor="let player of players;index as i">
+          <td class="fw-bold">{{i + 1}}</td>
+          <td><a [routerLink]="['/player/detail',player.id]">{{player.name}}</a></td>
+          <td>{{player.champ}}</td>
+          <td>
+            <button class="btn btn-danger list-btn" [routerLink]="['/player/delete',player.id]">Xóa </button>
+            <button class="btn btn-success list-btn" [routerLink]="['/player/edit',player.id]"> Sửa</button>
+          </td>
+        </tr>
+      </ng-container>
+      </tbody>
+    </table>
+  </div>
+</div>
+
